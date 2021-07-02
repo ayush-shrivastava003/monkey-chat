@@ -46,6 +46,10 @@ class gui():
         # self.button.grid(row=5, column=3)
         self.entry.place(relx=0.5, rely=0.65, anchor=tk.CENTER)
 
+        self.loggedInAs = tk.Label(root, font=tkFont.Font(family="Roboto Light", size=8), fg="#FFF", bg=bgcol, width=500)
+        self.loggedInAs.configure(text=f"logged in as \"{myUsername}\"")
+        self.loggedInAs.place(relx=0.5, rely=0.7, anchor=tk.CENTER)
+
     def sendMSG(self, event):
         try:
             msg = self.entry.get()
